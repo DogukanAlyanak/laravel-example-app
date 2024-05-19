@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     // Home
     public function index() {
-        return view("front.index");
+        // return view("front.index");
     
         // Redirect Example
         /* public function about() {
@@ -19,17 +19,22 @@ class HomeController extends Controller
         } */
 
         // variable transfer
-        $age = 28;
+        $age = 15;
         
         $person = new \stdClass();
-        $person->age = 28;
+        $person->age = $age;
 
         // return view("front.index", ["age" => $age]);
         // return view("front.index", compact("age"));
         /* return view("front.index")
             ->with("age, $age")
             ->with("sercan", "recep"); */
-        return view("front.index")->with(["age" => $age, "sercan" => "recep"]);
+        return view("front.index")
+            ->with([
+                "age" => $age, 
+                "person" => $person, 
+                "sercan" => "recep"
+            ]);
 
     }    
     // About
