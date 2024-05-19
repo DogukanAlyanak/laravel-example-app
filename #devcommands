@@ -19,3 +19,8 @@ composer update
 
 php artisan make:component InputText 
 php artisan make:component InputText --view
+
+php artisan migrate
+
+php artisan make:migration create_articles_table  // create_ => oluştur, articles => dosya adı & tablo adı, _table => türü, --create=.... => tablo adı
+php artisan make:migration create_articles_table  --create=sercan  // create_ => oluştur, articles => dosya adı, _table => türü, --create=.... => tablo adı
